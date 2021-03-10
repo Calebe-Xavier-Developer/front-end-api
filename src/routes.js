@@ -21,7 +21,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 const Routes = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Suspense fallback={<div className="mt-5 pt-5"> <CircleProgress /> </div>}>
       <Switch>
           <Route exact path="/" component={SignIn} />
